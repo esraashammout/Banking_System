@@ -1,16 +1,26 @@
-# untitled36
+📱 App Icon Setup (flutter_launcher_icons)
 
-A new Flutter project.
+To generate the app icons locally, please follow the steps below:
 
-## Getting Started
+1. Install Dependencies
 
-This project is a starting point for a Flutter application.
+Make sure you have the required package installed:
 
-A few resources to get you started if this is your first Flutter project:
+flutter pub get
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Generate the App Icons
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Run the following command to generate the icons for both Android and iOS:
+
+flutter pub run flutter_launcher_icons
+
+3. Notes
+
+This command must be run locally on each developer’s machine to generate the icon assets.
+
+If the icons do not appear after pulling the project, run the command again.
+
+Ensure that the configuration exists inside the pubspec.yaml file under:
+
+flutter_launcher_icons:
+  ...
