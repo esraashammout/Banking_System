@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     // إعداد وحدة التحكم بالحركة
     _controller = AnimationController(
-      duration: const Duration(seconds: 2), // مدة الحركة
+      duration: const Duration(seconds: 4), // مدة الحركة
       vsync: this,
     );
 
@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     _controller.forward();
 
     // الانتقال إلى شاشة تسجيل الدخول بعد 3 ثوانٍ
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => const LoginScreen(),
@@ -82,20 +82,12 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     ClipOval(
     child: Image.asset(
     "assets/images/download.png",
-    width: 200,
-    height: 200,
+    width: 350,
+    height: 350,
     fit: BoxFit.cover,
     ),
     ),
-                SizedBox(height: 20),
-                Text(
-                  'Bank App',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+
               ],
             ),
           ),
